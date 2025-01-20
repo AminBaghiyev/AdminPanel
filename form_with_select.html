@@ -1,0 +1,29 @@
+<!-- Begin Page Content -->
+<div class="row align-items-center justify-content-center col-12 p-0 m-0">
+    <div class="card shadow col-lg-6 col-md-8 col-10 p-0">
+        <div class="card-header d-flex justify-content-between align-items-center py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Add Item</h6>
+        </div>
+        <div class="card-body">
+            <form class="container" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Property"></label>
+                    <input class="form-control" asp-for="Property" />
+                    <span class="text-danger" asp-validation-for="Property"></span>
+                </div>
+                <div class="mb-3">
+                    <img style="width: 150px" src="~/uploads/places/@Model.PropertyURL" />
+                </div>
+                <div class="mb-3">
+                    <select class="custom-select" asp-items="SelectList" asp-for="PropertyId">
+                        <option selected>Select Property</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="PropertyId"></span>
+                </div>
+                <p class="text-danger text-center">@Html.ValidationMessage("CustomError")</p>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
