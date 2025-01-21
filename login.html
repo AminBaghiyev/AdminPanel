@@ -32,27 +32,27 @@
                         </div>
                         <form class="user" method="POST">
                             <div class="form-group">
-                                <input class="form-control form-control-user" asp-for="UserName" />
-                                <span class="text-danger" asp-validation-for="UserName"></span>
+                                <input class="form-control form-control-user" id="UserName" />
+                                <span class="text-danger" id="UserName"></span>
                             </div>
                             <div class="form-group">
-                                <input class="form-control form-control-user" asp-for="Password" />
-                                <span class="text-danger" asp-validation-for="Password"></span>
+                                <input class="form-control form-control-user" id="Password" />
+                                <span class="text-danger" id="Password"></span>
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox small">
-                                    <input class="custom-control-input" asp-for="RememberMe" />
-                                    <label class="custom-control-label" asp-for="RememberMe"></label>
+                                    <input class="custom-control-input" id="RememberMe" />
+                                    <label class="custom-control-label" for="RememberMe"></label>
                                 </div>
                             </div>
-                            <p class="text-danger text-center">@Html.ValidationMessage("CustomError")</p>
+                            <p class="text-danger text-center" id="customerror"></p>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Login
                             </button>
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a class="small" asp-action="Register">Create an Account!</a>
+                            <a class="small" href="/Register">Create an Account!</a>
                         </div>
                     </div>
                 </div>
